@@ -37,7 +37,7 @@ SA_b = y_mean_train - (X_mean_train.T @ SA_w)
 #funcion de perdida
 y_hat = X_train @ SA_w + SA_b  #yc_hat = (353,)
 error = y_hat - y_train #error = (353,)
-L = np.mean(error.T @ error) + (lmb * (SA_w.T @ SA_w))
+L = (1 / N) * (error.T @ error) + (lmb * (SA_w.T @ SA_w))
 
 #prediccion
 pred = X_test @ SA_w + SA_b
@@ -51,7 +51,7 @@ print(f"MAE:  {MAE:.4f}")
 print(f"R²:   {R2:.4f}")
 
 
-#MSE:  5025.8006
-#RMSE: 70.8929
-#MAE:  61.9700
-#R²:   0.0514
+#MSE:  2889.3534
+#RMSE: 53.7527
+#MAE:  42.8180
+#R²:   0.4546

@@ -12,6 +12,7 @@ b = 0.3
 a = 0.1
 lmb = 0.1
 N = len(y_train)
+
 #metricas del modelo
 def evaluate_model(y_true, y_pred):
     MSE = mean_squared_error(y_true, y_pred)
@@ -75,6 +76,7 @@ for epoch in range(3001):
         print(f"R²:   {R2:.4f}")
 
 
-#RMSE: 53.5741
-#MAE:  43.1662
-#R²:   0.4583
+#MSE:  2858.4316
+#RMSE: 53.4643
+#MAE:  43.3080
+#R²:   0.4605

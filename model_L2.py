@@ -10,8 +10,9 @@ from sklearn.metrics import mean_squared_error, root_mean_squared_error, mean_ab
 w = np.zeros(X_train.shape[1], dtype=np.float64)
 b = 0.3
 a = 0.1
-lmb = 0.1
+lmb = 0.00001
 N = len(y_train)
+
 #metricas del modelo
 def evaluate_model(y_true, y_pred):
   MSE = mean_squared_error(y_true, y_pred)
